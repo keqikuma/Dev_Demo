@@ -98,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "be366feeca076366",
@@ -188,6 +189,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "218c0a06b5f2e1ff",
-  "lastOpenFiles": []
+  "active": "e0a9892852ea4269",
+  "lastOpenFiles": [
+    "image/menu.png",
+    "image/截屏2025-03-24 15.42.28.png",
+    "image/make-j$(nproc).png",
+    "image/截屏2025-03-24 15.39.02.png",
+    "截屏2025-03-24 15.39.02.png"
+  ]
 }
