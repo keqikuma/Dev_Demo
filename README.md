@@ -92,10 +92,10 @@ make menuconfig
 
 1. 勾选：`Build static binary (no shared libs)`  
     → 生成静态链接的可执行文件，避免依赖动态库，方便运行在最小 rootfs 上。
-    
+    ![build_static_binary](build_static_binary.png)
 2. 取消勾选：`tc` 工具  
     → 精简体积，`tc` 用于网络限速测试，不影响基本功能。
-    
+    ![tc](tc.png)
 按 `ESC` 退出并保存。
 
 ### 第四步：编译并安装 BusyBox
@@ -121,6 +121,7 @@ mount -t sysfs none /sys
 echo -e "\n[OK] BusyBox Rootfs 启动成功！"
 exec /bin/sh
 ```
+![init](init.png)
 **为什么这样写？**
 
 - `/init` 是启动时的第一个进程（PID 1）

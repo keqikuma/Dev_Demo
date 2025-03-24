@@ -98,8 +98,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "be366feeca076366",
@@ -191,6 +190,12 @@
   },
   "active": "e0a9892852ea4269",
   "lastOpenFiles": [
+    "image/init.png",
+    "image/截屏2025-03-24 20.27.14.png",
+    "image/tc.png",
+    "image/截屏2025-03-24 20.26.07.png",
+    "image/build_static_binary.png",
+    "image/截屏2025-03-24 20.24.52.png",
     "image/menu.png",
     "image/截屏2025-03-24 15.42.28.png",
     "image/make-j$(nproc).png",
