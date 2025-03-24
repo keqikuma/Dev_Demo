@@ -11,7 +11,7 @@ Is's begin of the new account.
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.84.tar.xz
 ```
 #### 方法二 直接网页下载
-![[kernel.org.png]]
+![kernel.org](./image/kernel.org.png)
 https://web.git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/refs/tags
 ###  第二步：通过 SCP 发送到虚拟机
 ```bash
