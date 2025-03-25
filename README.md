@@ -152,3 +152,36 @@ QEMU 启动时无法读取普通目录，它只能识别 ext4 或 cpio 等格式
 |`rootfs.ext4`|可挂载的 ext4 根文件系统镜像|
 |`linux-6.6.84/arch/arm64/boot/Image`|编译后的内核镜像|
 |`rootfs/init`|BusyBox 启动入口脚本|
+
+### 第九步：使用 QEMU 启动内核和 rootfs
+```bash
+qemu-system-aarch64 \
+  -M virt \
+  -cpu cortex-a57 \
+  -m 1024 \
+  -nographic \
+  -kernel linux-6.6.84/arch/arm64/boot/Image \
+  -append "root=/dev/vda console=ttyAMA0" \
+  -drive if=none,file=rootfs.ext4,format=raw,id=hd0 \
+  -device virtio-blk-device,drive=hd0 \
+  -netdev user,id=net0 \
+  -device virtio-net-device,netdev=net0
+```
+**启动参数解释：**
+| 参数 | 含义 |
+| --- | --- |
+|`-M virt`|指定 ARM 虚拟开发板类型 |
+|`-cpu cortex-a57`|	使用 ARMv8 兼容 CPU |
+|`-m 1024`|	分配 1GB 内存 |
+|`-nographic`|	不使用图形界面，串口输出到终端 |
+|`-kernel Image`| 指定编译好的 Linux 内核 |
+|`-append "root=/dev/vda..."`|	设置内核启动参数，rootfs 位置和串口控制台 |
+|`-drive ...`| 加载 rootfs.ext4 镜像 |
+|`-device virtio-blk-device...`| 让 rootfs 挂载为 /dev/vda |
+|`-netdev / -device`| 创建用户网络接口，支持 ping、wget |
+
+#### 启动成功后 
+```bash
+[OK] BusyBox Rootfs 启动成功！
+/ #
+```
