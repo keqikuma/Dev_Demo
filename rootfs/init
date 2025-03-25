@@ -1,0 +1,5 @@
+#!/bin/sh
+mount -t proc none /proc
+mount -t sysfs none /sys
+echo -e "\n[OK] BusyBox Rootfs 启动成功！"
+exec /bin/sh
