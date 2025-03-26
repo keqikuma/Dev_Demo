@@ -61,6 +61,21 @@ ls -lh arch/arm64/boot/Image
 ```
 
 ---
+## QEMU 安装与简介
+
+为了运行自己编译的 Linux 内核，QEMU 是一个强大的虚拟机模拟器。它支持多种架构，包括我们当前使用的 ARM64。
+
+### 安装 QEMU（ARM64）
+
+```bash
+sudo apt install qemu-system-aarch64
+``` 
+
+### [启动方式](#第九步：使用-QEMU-启动内核和-rootfs)
+
+我们使用 QEMU 来模拟一个 ARM64 虚拟机，并使用 `-kernel` 启动我们编译好的 Linux 内核，使用 `-drive file=rootfs.ext4,...` 加载我们自制的根文件系统。
+
+---
 
 ## BusyBox + Rootfs 构建流程（适用于 ARM64 QEMU 内核启动）
 
