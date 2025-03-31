@@ -227,6 +227,10 @@ qemu-system-aarch64 \
 |`-device virtio-blk-device...`|让 rootfs 挂载为 `/dev/vda`|
 |`-netdev / -device`|创建用户网络接口，支持 ping、wget|
 
+```bash
+qemu-system-aarch64   -M virt   -cpu cortex-a53   -nographic   -m 512M   -kernel ~/Dev/qemu/linux-6.6.84/arch/arm64/boot/Image   -initrd rootfs.cpio.gz   -append "console=ttyAMA0 rdinit=/init"
+```
+
 #### 启动成功后 
 ```bash
 [OK] BusyBox Rootfs 启动成功！
